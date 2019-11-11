@@ -100,6 +100,15 @@ window.ToDoList = {
 
             ToDoList.markItemDone(id,checked);
 
+        });
+
+        $("#to-do-items").delegate(".delete-item","click",function (event) {
+            event.preventDefault();
+
+            let id = $(this).data("id");
+
+            ToDoList.deleteItem(id);
+
         })
 
     }
